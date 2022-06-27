@@ -6,16 +6,24 @@
 # After you have solved it, write a second version of your script using list comprehension.
 
 # generate range of numbers
-for i in range(1,101):
-    # check if cleanly divisible by 3
-    if i % 3 == 0:
-        # checks if also cleanly divisible by 5
-        if i % 5 == 0:
-            print("FizzBuzz")
-        print("Fizz")
-    # checks if cleanly divisible by 5 but not 3
-    elif i % 5 == 0:
-        print("Buzz")
-    # everything else
-    else:
-        print(i)
+def FizzBuzz1():
+    for i in range(1, 101):
+        # check if cleanly divisible by 3
+        if i % 3 == 0:
+            # checks if also cleanly divisible by 5
+            if i % 5 == 0:
+                print("FizzBuzz")
+            print("Fizz")
+        # checks if cleanly divisible by 5 but not 3
+        elif i % 5 == 0:
+            print("Buzz")
+        # everything else
+        else:
+            print(i)
+
+
+# solution 2
+FizzBuzz = ["FizzBuzz" if i % 3 == 0 and i % 5 == 0 else "Fizz" if i %
+            3 == 0 else "Buzz" if i % 5 == 0 else i for i in range(1, 101)]
+for i in FizzBuzz:
+    print(i)
