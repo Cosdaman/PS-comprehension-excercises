@@ -7,12 +7,15 @@
 
 # generate range of numbers
 for i in range(1,101):
-    # check for both conditions
+    # check if cleanly divisible by 3
     if i % 3 == 0:
+        # checks if also cleanly divisible by 5
         if i % 5 == 0:
             print("FizzBuzz")
         print("Fizz")
+    # checks if cleanly divisible by 5 but not 3
     elif i % 5 == 0:
         print("Buzz")
+    # everything else
     else:
         print(i)
